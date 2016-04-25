@@ -7,10 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-  <form action="login.json" menthod="post">
-  	用户名:<input type="text" name="userName" /><br/>
-  	密码:<input type="password" name="pwd" /><br/>
-  	<input type="submit" value="登录" />
-  </form>
+	好麻烦啊
 </body>
 </html>

@@ -7,10 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-  <form action="login.json" menthod="post">
-  	用户名:<input type="text" name="userName" /><br/>
-  	密码:<input type="password" name="pwd" /><br/>
-  	<input type="submit" value="登录" />
-  </form>
+  <h2>哎呦，你登陆成功了！</h2>
+  <a href="/list.json">查询信息</a>
 </body>
 </html>
