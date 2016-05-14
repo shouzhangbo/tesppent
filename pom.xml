@@ -236,7 +236,7 @@
     
     <!-- Lack Jar End -->
     
-     <!-- 本机jdbc链接�?-->
+     <!-- 本机jdbc链接�?-->
         <dependency>
             <groupId>postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -255,13 +255,13 @@
             <version>1.2.2</version>
         </dependency>
     
-        <!-- 导入java ee jar �?-->  
+        <!-- 导入java ee jar �?-->  
         <dependency>  
             <groupId>javax</groupId>  
             <artifactId>javaee-api</artifactId>  
             <version>7.0</version>  
         </dependency>
-        <!-- 导入java ee jar �?-->  
+        <!-- 导入java ee jar �?-->  
 	    <dependency>  
 	        <groupId>javax</groupId>  
 	        <artifactId>javaee-api</artifactId>  
