@@ -8,10 +8,10 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.my</groupId>
-  <artifactId>paypal</artifactId>
+  <artifactId>OnlySpring</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>paypal Maven Webapp</name>
+  <name>OnlySpring Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -20,31 +20,8 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-    	<groupId>com.my</groupId>
-		<artifactId>CommonConfig</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-    </dependency>
-     
   </dependencies>
-  <profiles>
-        <profile>
-            <id>demo</id>
-            <properties>
-  				<rootLevel>DEBUG</rootLevel>
-  				<loggingLevel>INFO</loggingLevel>
-  				<logfile>E:</logfile>
-  			</properties>
-  		</profile>
-  	</profiles>
   <build>
-    <finalName>paypal</finalName>
-    <resources>
-        <resource>
-            <directory>src/main/resources</directory>
-            <filtering>true</filtering>
-        </resource>
-    </resources>
+    <finalName>OnlySpring</finalName>
   </build>
-  
 </project>

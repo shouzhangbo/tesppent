@@ -12,6 +12,8 @@
     <module>CommonConfig</module>
     <module>user</module>
     <module>order</module>
+    <module>OnlySpring</module>
+    <module>SpringMyBaties</module>
   </modules>
   
   <properties>
@@ -55,7 +57,12 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
             <version>${spring.version}</version>
-        </dependency> 
+        </dependency>
+        <dependency>
+		    <groupId>org.springframework.data</groupId>
+		    <artifactId>spring-data-mongodb</artifactId>
+		    <version>1.1.0.RELEASE</version>
+		</dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -323,5 +330,30 @@
 	 <artifactId>zkclient</artifactId>
 	 <version>0.1</version>
    </dependency>
+   <dependency>
+	    <groupId>aopalliance</groupId>
+	    <artifactId>aopalliance</artifactId>
+	    <version>1.0</version>
+	</dependency>
+   <dependency>
+	    <groupId>org.mongodb</groupId>
+    	<artifactId>mongo-java-driver</artifactId>
+	    <version>3.2.2</version>
+	</dependency>
+	
+	<!-- http://mvnrepository.com/artifact/net.spy/spymemcached -->
+	<dependency>
+	    <groupId>net.spy</groupId>
+	    <artifactId>spymemcached</artifactId>
+	    <version>2.10.6</version>
+	</dependency>
+	<!-- http://mvnrepository.com/artifact/com.google.code.gson/gson -->
+	<dependency>
+	    <groupId>com.google.code.gson</groupId>
+	    <artifactId>gson</artifactId>
+	    <version>2.2.4</version>
+	</dependency>
+			
+
   </dependencies>
 </project>

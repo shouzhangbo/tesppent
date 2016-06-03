@@ -8,43 +8,19 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.my</groupId>
-  <artifactId>paypal</artifactId>
+  <artifactId>SpringMyBaties</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>paypal Maven Webapp</name>
+  <name>SpringMyBaties Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
-      <scope>test</scope>
     </dependency>
-    <dependency>
-    	<groupId>com.my</groupId>
-		<artifactId>CommonConfig</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-    </dependency>
-     
   </dependencies>
-  <profiles>
-        <profile>
-            <id>demo</id>
-            <properties>
-  				<rootLevel>DEBUG</rootLevel>
-  				<loggingLevel>INFO</loggingLevel>
-  				<logfile>E:</logfile>
-  			</properties>
-  		</profile>
-  	</profiles>
   <build>
-    <finalName>paypal</finalName>
-    <resources>
-        <resource>
-            <directory>src/main/resources</directory>
-            <filtering>true</filtering>
-        </resource>
-    </resources>
+    <finalName>SpringMyBaties</finalName>
   </build>
-  
 </project>
