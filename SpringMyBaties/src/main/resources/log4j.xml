@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%t %d{yyyy/MM/dd HH:mm:ss,SSS} [%7r] %6p - %30.30c - %m \n"/>
+        </layout>
+    </appender>
+
+    <appender name="FILE" class="org.apache.log4j.DailyRollingFileAppender">
+    	<param name="File" value="D:\\Logs\\base\\zhtx.log"/>
+    	<param name="Append" value="true"/>
+        <param name="encoding" value="GBK"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%t %d{yyyy/MM/dd HH:mm:ss,SSS} [%7r] %6p - %30.30c - %m \n"/>
+        </layout>
+    </appender>
+    
+    <!-- 发邮件（只有ERROR时才会发送！） -->  
+ <appender name="MAIL" class="org.apache.log4j.net.SMTPAppender">  
+  	
+  <param name="threshold" value="debug" />  
+   	<!--日志的错误级别  
+   <param name="threshold" value="fatal"/>  
+  -->  
+  <!-- 缓存文件大小，日志达到512K时发送Email -->  
+  <param name="BufferSize" value="1" /><!-- 单位K -->  
+  <param name="From" value="hou891214@163.com" />  
+  <param name="SMTPHost" value="smtp.163.com" />  
+  <param name="Subject" value="juyee-log4jMessage" />  
+  <param name="To" value="1532558305@qq.com" />  
+  <param name="SMTPUsername" value="hou891214" />  
+  <param name="SMTPPassword" value="houzhangbo" />  
+  <layout class="org.apache.log4j.PatternLayout">  
+   <param name="ConversionPattern"  
+    value="%-d{yyyy-MM-dd HH:mm:ss.SSS} [%p]-[%c] %m%n" />  
+  </layout>  
+ </appender>  
+   <appender name="socketAppender" class="org.apache.log4j.net.SocketAppender">
+        <param name="remoteHost" value="192.168.102.128" /><!-- 远程主机地址 -->
+        <param name="port" value="22" /><!-- 远程主机端口 -->
+        <param name="Threshold" value="info" />
+        <param name="ReconnectionDelay" value="60000" />
+        <param name="LocationInfo" value="true" />
+        <param name="application" value="sys-web"></param>
+    </appender>
+
+    <root>
+        <priority value="info"/>
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="MAIL"/>
+        <appender-ref ref="socketAppender"/>
+    </root>
+</log4j:configuration>

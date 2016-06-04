@@ -14,10 +14,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.my.test.mapper.baseUser;
 import com.my.test.util.JsonUtil;
 import com.my.test.util.MemcachedUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Controller
 public class LoginCtrl {
 
+	 private final static Logger log = LoggerFactory.getLogger(LoginCtrl.class);
 	@Autowired
 	private MemcachedUtil memcachedUtil;
 	
@@ -25,11 +28,13 @@ public class LoginCtrl {
 	@ResponseBody
 	public Map<String,Object> valiLlogin(HttpServletResponse response,HttpServletRequest request)
 	{
+		log.info("哈哈哈哈哈哈哈哈哈哈");
 		Map<String,Object> map = new HashMap<String,Object>();
 		baseUser user = getUserByCookies(request,"name");
 		if(null==user){
+			log.info("该用户不存在");
 			map.put("respCode", "9000");
-			map.put("respMsg", "用户bucunz");
+			map.put("respMsg", "用户不存在");
 			return map;
 		}
 		baseUser user1 = (baseUser) memcachedUtil.get(user.getUserName());

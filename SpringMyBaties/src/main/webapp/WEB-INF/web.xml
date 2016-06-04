@@ -31,7 +31,11 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-    
+    <!-- log4j deployee -->
+    <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>classpath*:log4j.xml</param-value>
+    </context-param>
     <!-- Spring MVC Dispatcher Servlet -->
     <servlet>
         <servlet-name>dispatcher</servlet-name>
